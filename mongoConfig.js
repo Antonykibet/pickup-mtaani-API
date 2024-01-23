@@ -5,6 +5,7 @@ const dbClient = new MongoClient(uri)
 
 let db = dbClient.db('PickupMtaani');
 let agentsCollection = db.collection('pickupMtaani')
+let adminConfigsCollection = db.collection('adminConfigs')
 
 
 async function dbInit(){
@@ -17,4 +18,4 @@ async function dbInit(){
 
 }
 
-module.exports = {dbInit,agentsCollection}
+module.exports = {dbInit,agentsCollection,adminConfigsCollection}
